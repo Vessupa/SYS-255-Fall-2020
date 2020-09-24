@@ -1,0 +1,2 @@
+To set a static IP address on CentOS, you need to make a text file within a directory to configure DHCP.
+Then you have to follow the prompts to create the connection, naming the name of the device, along with the subnet and the ip address itself of the static network.
