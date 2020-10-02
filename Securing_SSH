@@ -1,0 +1,9 @@
+1. First, I had to make a new user and password on CentOs (admin).
+
+2. Then I had to use the wheel command to allow admin to gain sudo abilities.
+
+3. Then I had to edit /etc/ssh/sshd_config in vi and change "#PermitRootLogin yes" to "PermitRootLogin no".
+
+4. Checked to make sure that root can't log in with command (cat /var/log/secure | grep "not met")
+
+5. Finally I had to restart the ssh with the command sudo systemctl restart sshd.service
