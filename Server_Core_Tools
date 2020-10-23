@@ -1,0 +1,8 @@
+Changing hostname through command prompt:
+sconfig>(follow the prompt)
+or
+netdom renamecomputer *localhost* /newname:*NewName*
+
+Command to open a firewall for managing the File Server
+netsh advfirewall firewall set rule group=”Remote File Server Resource Manager Management” new enable=yes
+
