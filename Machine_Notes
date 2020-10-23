@@ -1,0 +1,3 @@
+Remote path to share: \\fs01-asani\Sales
+Local path to share: C:\Shares\Sales
+gpresult /r shows gpresults
