@@ -6,3 +6,32 @@ netdom renamecomputer *localhost* /newname:*NewName*
 Command to open a firewall for managing the File Server
 netsh advfirewall firewall set rule group=”Remote File Server Resource Manager Management” new enable=yes
 
+Mapping drives using Group Policy preferences:
+
+Open Group Policy Management.
+Right-click the domain or the required subfolder to create a new GPO, or select an already existing one. Right-click and select Edit to open the Group Policy Management Editor.
+
+Go to User Configuration > Preferences > Windows Settings > Drive Maps.
+
+Right-click and select New > Mapped Drive.
+
+Under the General tab (see Figure 1 below), do the following:
+
+Action: Select Create or Update.
+
+Location: Specify the full file path, e.g. \\Anjali-dc1\c.
+
+Reconnect: Enable this to auto connect the drive.
+
+Label as: Pick a suitable name for the shared drive, e.g. SharedDrive.
+
+Drive Letter: Select a suitable letter for the drive, e.g. K.
+
+Connect as: Enter a username and password if you want users to connect with certain credentials other than their own Windows login credentials.
+
+Hide/Show this drive: Select whether you want to hide the folder or make it visible on the network.
+
+Hide/Show all drives: Select whether, by default, all the shared drives/folders are hidden or visible.
+
+ Click Apply and OK.
+For the settings to take effect, open a Command Prompt in the computer receiving the drive mapping, type GPUPDATE, and hit Enter.
