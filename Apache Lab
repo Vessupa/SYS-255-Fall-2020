@@ -1,0 +1,8 @@
+Hostname reminder, Use:
+hostnamectl set-hostname my.new-hostname.server
+or
+vi /etc/hostname and edit the name to change the static hostname
+To rename a file:
+mv oldfile.txt newfile.txt
+To restart network:
+service network restart
